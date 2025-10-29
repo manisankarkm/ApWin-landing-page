@@ -469,7 +469,7 @@ video {
   .white-box h2 {
     font-size: 15px;
     line-height: 30px;
-    max-width: 80%;
+    max-width: 60%;
     width: 100%;
     margin-bottom: 0;
   }
@@ -490,13 +490,15 @@ video {
     margin-bottom: 10px;
   }
   .boxes {
-    width: 80%;
+    width: 90%;
+    margin-top: 10px;
   }
   .bottom-sports-image {
     max-width: 100%;
-    margin-top: 20px;
+    margin-top: 25px;
   }
 }
+
 
 @media (max-width: 320px) {
   .home-inner .top-content-bx h1 {
@@ -532,3 +534,4 @@ video {
     margin-top: 5px;
   }
 }
+
