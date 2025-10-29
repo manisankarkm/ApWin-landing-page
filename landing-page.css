@@ -399,7 +399,7 @@ video {
 /* Responsive ******************************/
 @media (max-width: 1399px) {
   .logo-box img {
-    max-width: 30%;
+    max-width: 60%;
     margin: 10px auto 5px;
   } /* Ensure center on small screen */
   .home-inner .top-content-bx h1 {
@@ -514,7 +514,7 @@ video {
     font-size: 17px;
   }
   .logo-box img {
-    max-width: 40%;
+    max-width: 70%;
   }
   .middle-text-box h3 {
     font-size: 20px;
@@ -533,6 +533,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
