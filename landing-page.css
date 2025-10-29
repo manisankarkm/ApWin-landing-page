@@ -1,0 +1,476 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.eot");
+  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.woff2") format("woff2"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.woff") format("woff"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.svg#BebasNeue-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("../fonts/Anton/Anton-Regular.eot");
+  src: url("../fonts/Anton/Anton-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Anton/Anton-Regular.woff2") format("woff2"),
+    url("../fonts/Anton/Anton-Regular.woff") format("woff"),
+    url("../fonts/Anton/Anton-Regular.ttf") format("truetype"),
+    url("../fonts/Anton/Anton-Regular.svg#Anton-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Haettenschweiler";
+  src: url("../fonts/haettenschweiler/Haettenschweiler.eot");
+  src: url("../fonts/haettenschweiler/Haettenschweiler.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/haettenschweiler/Haettenschweiler.woff2") format("woff2"),
+    url("../fonts/haettenschweiler/Haettenschweiler.woff") format("woff"),
+    url("../fonts/haettenschweiler/Haettenschweiler.ttf") format("truetype"),
+    url("../fonts/haettenschweiler/Haettenschweiler.svg#Haettenschweiler")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Medium.eot");
+  src: url("../fonts/poppins/Poppins-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/poppins/Poppins-Medium.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Medium.woff") format("woff"),
+    url("../fonts/poppins/Poppins-Medium.ttf") format("truetype"),
+    url("../fonts/poppins/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Bold.eot");
+  src: url("../fonts/poppins/Poppins-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/poppins/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Bold.woff") format("woff"),
+    url("../fonts/poppins/Poppins-Bold.ttf") format("truetype"),
+    url("../fonts/poppins/Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --golden: #e2af44;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  font-family: "Bebas Neue";
+  max-width: 480px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  /* 🌟 CRITICAL: Prevents body from scrolling if content slightly overflows */
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  line-height: 1;
+  color: var(--white);
+  font-weight: 400;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 21px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--black);
+  margin-bottom: 15px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  line-height: 1.2;
+  color: inherit;
+  font-family: inherit;
+}
+span {
+  display: inline-block;
+}
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none;
+}
+:focus-visible {
+  outline: none;
+}
+
+/* Home Start *********************************************/
+.home {
+  background-image: url(banner.png);
+  height: 100dvh;
+  /* 🌟 CRITICAL: Reduced padding to save vertical space on a fixed screen */
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  /* 🌟 CRITICAL: Use space-evenly to spread content more dynamically */
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0; /* Removing gap and relying on margin/padding for control */
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.home-inner {
+  display: flex;
+  align-items: center;
+  /* 🌟 CRITICAL: Changed to center to use space-evenly on the parent .home */
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.home-inner .top-content-bx {
+  width: 100%;
+  margin: 0 auto;
+}
+.home-inner .top-content-bx h1 {
+  font-size: 110px;
+  line-height: 110px;
+  font-family: "Haettenschweiler";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.home-inner .btm-content-bx {
+  max-width: 70%;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.white-box {
+  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+.white-box h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 40px;
+  background-color: var(--white);
+  font-family: "poppins";
+  color: var(--black);
+  font-weight: bold;
+  border-radius: 30px;
+  margin: 0 auto 10px;
+  padding: 5px;
+  position: relative;
+}
+.white-box h2::before,
+.white-box h2::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--black);
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.white-box h2::before {
+  left: 20px;
+}
+.white-box h2::after {
+  right: 20px;
+}
+
+.logo-box img {
+  max-width: 70%;
+  width: 100%;
+  margin: 10px auto 5px;
+}
+
+.middle-text-box h3 {
+  font-size: 45px;
+  text-transform: uppercase;
+}
+.center-part {
+  width: 100%;
+  max-width: 90%;
+}
+.line-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+.line-text span.line {
+  width: 35%;
+  height: 2px;
+  background: var(--white);
+}
+.middle-btn-box span {
+  background: var(--white);
+  color: var(--black);
+  padding: 3px;
+  border-radius: 50px;
+  text-align: center;
+  width: 45%;
+  font-size: 20px;
+}
+
+/* 🌟 DESIRED GAP 1: Space below WhatsApp IDs */
+.middle-btn-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px; /* Slight reduction for vertical space */
+}
+
+.bonas-sec {
+  border: #e2af44;
+}
+
+.btm-part {
+  margin-top: 0;
+}
+
+.boxes {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px auto 20px; /* Reduced top margin */
+}
+
+.boxes .box {
+  padding: 15px 10px;
+  text-align: center;
+  flex: 1 1 50%;
+  font-size: 25px;
+  color: var(--black);
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+}
+.golden-gradient {
+  background: url(btn-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.bottom-sports-image {
+  max-width: 75%;
+  width: 100%;
+  height: auto;
+  /* 🌟 CRITICAL: Reduced margin-top to save vertical space */
+  margin: 0 auto;
+}
+
+.zoom-in {
+  animation: zoomPulse 1s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.instant-bonas-text {
+  font-size: 25px;
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  color: var(--golden);
+  /* 🌟 DESIRED GAP 2: Space above refill/return boxes */
+  margin-bottom: 20px; /* Slight reduction for vertical space */
+  display: block;
+  padding: 5px 10px;
+  border: 3px solid var(--white);
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px var(--black);
+}
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* ... (Larger screen media queries remain similar for consistency) ... */
+
+@media (max-width: 479px) {
+  .home {
+    padding: 10px 0; /* 🌟 Smallest padding for fixed screen */
+  }
+  .home-inner .top-content-bx h1 {
+    font-size: 70px; /* Smaller font for top title */
+    line-height: 70px;
+  }
+  .white-box h2 {
+    font-size: 18px; /* Smaller font for "Welcome" box */
+    line-height: 25px;
+    margin-bottom: 5px;
+  }
+
+  /* ⭐️ MOBILE LOGO SIZE: Set to 60% for better visibility */
+  .logo-box img {
+    margin: 5px auto 8px; /* Adjusted margin */
+    max-width: 60%;
+  }
+
+  .middle-text-box h3 {
+    font-size: 24px; /* Smaller font for middle title */
+  }
+
+  .instant-bonas-text {
+    font-size: 18px; /* Smaller font for bonus text */
+    padding: 3px 8px;
+    margin-bottom: 15px; /* Final mobile space above boxes */
+  }
+
+  .middle-btn-box {
+    margin-bottom: 25px; /* Final mobile space below WhatsApp IDs */
+  }
+
+  .boxes {
+    width: 85%;
+    margin: 10px auto 15px; /* Reduced margins */
+  }
+
+  .bottom-sports-image {
+    max-width: 95%;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .home {
+    padding: 5px 0; /* 🌟 Minimal padding for tiny screens */
+  }
+  .home-inner .top-content-bx h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .middle-btn-box span {
+    font-size: 14px;
+  }
+
+  /* ⭐️ SMALLEST MOBILE LOGO SIZE: Set to 60% for better visibility */
+  .logo-box img {
+    max-width: 60%;
+  }
+
+  .middle-text-box h3 {
+    font-size: 18px;
+  }
+  .white-box h2 {
+    font-size: 14px;
+  }
+  .boxes .box {
+    font-size: 18px;
+    padding: 8px 5px;
+  }
+  .instant-bonas-text {
+    font-size: 16px;
+    margin-bottom: 10px; /* Minimal space for fixed screen */
+  }
+  .bottom-sports-image {
+    max-width: 100%;
+    margin-top: 2px;
+  }
+}
