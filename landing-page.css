@@ -488,6 +488,7 @@ video {
     font-size: 20px;
     padding: 3px 8px;
     margin-bottom: 5px;
+    margin-bottom:10px;
   }
   .boxes {
     width: 90%;
@@ -532,4 +533,5 @@ video {
     margin-top: 5px;
   }
 }
+
 
