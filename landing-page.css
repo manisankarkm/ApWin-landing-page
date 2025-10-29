@@ -388,28 +388,28 @@ video {
   text-shadow: 1px 1px 2px var(--black);
 }
 
-/* --- MEDIA QUERIES FOR MOBILE (Force-Scaling) --- */
+/* --- MEDIA QUERIES FOR MOBILE (Force-Scaling for Larger Appearance) --- */
 
 @media (max-width: 479px) {
-  /* 🛑 CRITICAL: Scale the entire content block to fit */
+  /* 🛑 CRITICAL: Increased Scale factor to make the elements appear BIGGER, while still fitting vertically. */
   .home-inner {
-    /* Scale down the content to fit the vertical space */
-    transform: scale(0.75); 
+    /* Scale factor increased from 0.75 to 0.85 (less shrinkage) */
+    transform: scale(0.85); 
     /* Anchor the scaling from the top center */
     transform-origin: top center;
-    /* Adjust height to ensure the scaled content fills the 100dvh container */
-    height: 133.33%; /* 1 / 0.75 = 1.3333 */
+    /* Adjust height to ensure the scaled content fills the 100dvh container (1 / 0.85 ≈ 1.176) */
+    height: 117.6%; 
   }
 }
 
 @media (max-width: 320px) {
-  /* 🛑 CRITICAL: Scale the entire content block down even more for the smallest screens */
+  /* 🛑 CRITICAL: Increased Scale factor for the smallest screens */
   .home-inner {
-    /* Scale down the content to fit the vertical space */
-    transform: scale(0.65);
+    /* Scale factor increased from 0.65 to 0.75 (less shrinkage) */
+    transform: scale(0.75);
     /* Anchor the scaling from the top center */
     transform-origin: top center;
-    /* Adjust height to ensure the scaled content fills the 100dvh container */
-    height: 153.8%; /* 1 / 0.65 = 1.538 */
+    /* Adjust height to ensure the scaled content fills the 100dvh container (1 / 0.75 ≈ 1.333) */
+    height: 133.3%;
   }
 }
