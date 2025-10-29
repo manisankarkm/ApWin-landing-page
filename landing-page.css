@@ -423,7 +423,7 @@ video {
 
   /* Logo adjustment from previous request */
   .logo-box img {
-    max-width: 60%;
+    max-width: 70%;
     margin: 5px auto 5px;
   }
 }
@@ -449,3 +449,4 @@ video {
     line-height: 17vw;
   }
 }
+
