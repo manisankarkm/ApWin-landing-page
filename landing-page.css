@@ -415,7 +415,7 @@ video {
   }
   /* MODIFIED: Adjusted box size for desktop/tablet */
   .boxes {
-    width: 60%;
+    width: 70%;
   }
   .boxes .box {
     padding: 5px;
@@ -453,7 +453,7 @@ video {
   }
   /* MODIFIED: Adjusted box size for mobile */
   .boxes {
-    width: 80%;
+    width: 70%;
   }
   .bottom-sports-image {
     max-width: 90%;
@@ -491,7 +491,7 @@ video {
     margin-top:15px;
   }
   .boxes {
-    width: 90%;
+    width: 70%;
   }
   .bottom-sports-image {
     max-width: 95%;
@@ -533,6 +533,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
