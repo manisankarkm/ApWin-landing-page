@@ -483,15 +483,15 @@ video {
   .center-part {
     max-width: 100%;
     padding: 5px;
-    margin-bottom:7px;
+    margin-bottom:3px;
   }
   .instant-bonas-text {
     font-size: 20px;
     padding: 3px 8px;
-    margin-top:30px;
+    margin-top:40px;
   }
   .boxes {
-    width: 70%;
+    width: 90%;
   }
   .bottom-sports-image {
     max-width: 95%;
@@ -533,6 +533,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
