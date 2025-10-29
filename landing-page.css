@@ -95,6 +95,7 @@
 body {
   color: var(--white);
   font-family: "Bebas Neue";
+  /* Keeping max-width for desktop containment */
   max-width: 480px;
   margin: 0 auto;
   height: 100%;
@@ -188,8 +189,8 @@ video {
 .home {
   background-image: url(banner.png);
   height: 100dvh;
-  /* Re-introducing a small padding for visual buffer, but relying primarily on scale */
-  padding: 10px 0;
+  /* CRITICAL: Absolutely no vertical padding for maximum space */
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,12 +214,12 @@ video {
   height: 100%;
   width: 100%;
 }
+/* All internal styles remain exactly as your original request... */
 .home-inner .top-content-bx {
   width: 100%;
   margin: 0 auto;
 }
 .home-inner .top-content-bx h1 {
-  /* Keeping original large size */
   font-size: 110px;
   line-height: 110px;
   font-family: "Haettenschweiler";
@@ -240,7 +241,6 @@ video {
   padding: 0 15px;
 }
 .white-box h2 {
-  /* Keeping original size */
   font-size: 26px;
   text-transform: uppercase;
   line-height: 40px;
@@ -278,7 +278,6 @@ video {
 }
 
 .middle-text-box h3 {
-  /* Keeping original size */
   font-size: 45px;
   text-transform: uppercase;
 }
@@ -294,7 +293,6 @@ video {
   margin: 0 auto;
   color: var(--white);
   font-weight: 500;
-  /* Keeping original size */
   font-size: 20px;
   font-family: "Poppins";
   text-transform: uppercase;
@@ -311,11 +309,10 @@ video {
   border-radius: 50px;
   text-align: center;
   width: 45%;
-  /* Keeping original size */
   font-size: 20px;
 }
 
-/* 🌟 DESIRED GAP 1: Space below WhatsApp IDs (Original size) */
+/* 🌟 Original Gaps Maintained */
 .middle-btn-box {
   display: flex;
   gap: 15px;
@@ -339,7 +336,6 @@ video {
   flex-direction: row;
   gap: 10px;
   justify-content: center;
-  /* Original margin */
   margin: 20px auto;
 }
 
@@ -347,7 +343,6 @@ video {
   padding: 15px 10px;
   text-align: center;
   flex: 1 1 50%;
-  /* Keeping original size */
   font-size: 25px;
   color: var(--black);
   font-family: "Bebas Neue";
@@ -363,7 +358,6 @@ video {
   max-width: 75%;
   width: 100%;
   height: auto;
-  /* Original margin */
   margin: 20px auto 0;
 }
 
@@ -382,12 +376,10 @@ video {
 }
 
 .instant-bonas-text {
-  /* Keeping original size */
   font-size: 25px;
   font-family: "Bebas Neue";
   text-transform: uppercase;
   color: var(--golden);
-  /* 🌟 DESIRED GAP 2: Space above refill/return boxes (Original size) */
   margin-bottom: 25px;
   display: block;
   padding: 5px 10px;
@@ -396,26 +388,28 @@ video {
   text-shadow: 1px 1px 2px var(--black);
 }
 
-/* --- MEDIA QUERIES FOR MOBILE (Aggressive Scaling for EXACT Match) --- */
+/* --- MEDIA QUERIES FOR MOBILE (Force-Scaling) --- */
 
 @media (max-width: 479px) {
-  /* 🛑 CRITICAL: Scale the entire content block down aggressively to guarantee fit */
+  /* 🛑 CRITICAL: Scale the entire content block to fit */
   .home-inner {
-    /* Scaling factor adjusted to be more aggressive */
-    transform: scale(0.78);
-    /* Counter-scale the height to take up the whole screen again (1/0.78 ≈ 1.282) */
-    height: 128.2%;
+    /* Scale down the content to fit the vertical space */
+    transform: scale(0.75); 
+    /* Anchor the scaling from the top center */
+    transform-origin: top center;
+    /* Adjust height to ensure the scaled content fills the 100dvh container */
+    height: 133.33%; /* 1 / 0.75 = 1.3333 */
   }
-
-  /* No other changes, maintaining exact design */
 }
 
 @media (max-width: 320px) {
   /* 🛑 CRITICAL: Scale the entire content block down even more for the smallest screens */
   .home-inner {
-    /* Scaling factor adjusted to be extremely aggressive */
-    transform: scale(0.68);
-    /* Counter-scale the height to take up the whole screen again (1/0.68 ≈ 1.47) */
-    height: 147%;
+    /* Scale down the content to fit the vertical space */
+    transform: scale(0.65);
+    /* Anchor the scaling from the top center */
+    transform-origin: top center;
+    /* Adjust height to ensure the scaled content fills the 100dvh container */
+    height: 153.8%; /* 1 / 0.65 = 1.538 */
   }
 }
