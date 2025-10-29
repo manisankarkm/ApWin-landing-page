@@ -408,7 +408,7 @@ video {
   }
   .middle-text-box h3 {
     font-size: 35px;
-    margin-bottom:10px;
+    margin-bottom:0px;
   }
   .home-inner .btm-content-bx {
     max-width: 55%;
@@ -482,7 +482,7 @@ video {
   }
   .middle-text-box h3 {
     font-size: 28px;
-    margin-bottom:10px;
+    margin-bottom:0px;
   }
   .center-part {
     max-width: 100%;
@@ -538,6 +538,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
