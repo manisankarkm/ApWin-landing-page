@@ -99,7 +99,7 @@ body {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  /* CRITICAL for no-scrolling */
+  /* 🛑 CRITICAL for no-scrolling */
   overflow: hidden;
 }
 
@@ -188,14 +188,13 @@ video {
 .home {
   background-image: url(banner.png);
   height: 100dvh;
-  /* CRITICAL: Removing padding here to maximize vertical space for content */
-  padding: 0;
+  /* Re-introducing a small padding for visual buffer, but relying primarily on scale */
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
-  /* Use space-evenly to distribute content when height is exactly 100dvh */
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 15px;
   position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -210,6 +209,7 @@ video {
   flex-direction: column;
   row-gap: 0;
   text-align: center;
+  /* Setting height to 100% for scaling anchor */
   height: 100%;
   width: 100%;
 }
@@ -396,56 +396,26 @@ video {
   text-shadow: 1px 1px 2px var(--black);
 }
 
-/* --- MEDIA QUERIES FOR MOBILE (Viewport Optimization) --- */
-
-/* No font size changes in the media queries to keep it exact */
+/* --- MEDIA QUERIES FOR MOBILE (Aggressive Scaling for EXACT Match) --- */
 
 @media (max-width: 479px) {
-  /* CRITICAL: Reduce overall vertical space between elements */
-  .middle-btn-box {
-    margin-bottom: 20px;
-  }
-  .boxes {
-    margin: 10px auto 10px;
-  }
-  .instant-bonas-text {
-    margin-bottom: 10px;
-  }
-  .bottom-sports-image {
-    margin: 10px auto 0;
+  /* 🛑 CRITICAL: Scale the entire content block down aggressively to guarantee fit */
+  .home-inner {
+    /* Scaling factor adjusted to be more aggressive */
+    transform: scale(0.78);
+    /* Counter-scale the height to take up the whole screen again (1/0.78 ≈ 1.282) */
+    height: 128.2%;
   }
 
-  /* CRITICAL: Use viewport units for H1 to prevent horizontal overflow */
-  .home-inner .top-content-bx h1 {
-    font-size: 15vw; /* Roughly equivalent to 72px on a 480px screen */
-    line-height: 15vw;
-  }
-
-  /* Logo adjustment from previous request */
-  .logo-box img {
-    max-width: 60%;
-    margin: 5px auto 5px;
-  }
+  /* No other changes, maintaining exact design */
 }
 
 @media (max-width: 320px) {
-  /* Maximum compression of vertical spacing */
-  .middle-btn-box {
-    margin-bottom: 15px;
-  }
-  .boxes {
-    margin: 5px auto 5px;
-  }
-  .instant-bonas-text {
-    margin-bottom: 5px;
-  }
-  .bottom-sports-image {
-    margin: 5px auto 0;
-  }
-
-  /* CRITICAL: Scaling down the H1 even more proportionally */
-  .home-inner .top-content-bx h1 {
-    font-size: 17vw;
-    line-height: 17vw;
+  /* 🛑 CRITICAL: Scale the entire content block down even more for the smallest screens */
+  .home-inner {
+    /* Scaling factor adjusted to be extremely aggressive */
+    transform: scale(0.68);
+    /* Counter-scale the height to take up the whole screen again (1/0.68 ≈ 1.47) */
+    height: 147%;
   }
 }
