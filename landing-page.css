@@ -485,7 +485,7 @@ video {
   .center-part {
     max-width: 100%;
     padding: 5px;
-    margin-bottom:3px;
+    margin-bottom:15px;
   }
   .instant-bonas-text {
     font-size: 20px;
@@ -535,6 +535,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
