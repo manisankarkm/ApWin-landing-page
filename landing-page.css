@@ -492,7 +492,7 @@ video {
   .instant-bonas-text {
     font-size: 20px;
     padding: 3px 8px;
-    margin-top:40px;
+    margin-top:20px;
   }
   .boxes {
     width: 90%;
@@ -522,7 +522,7 @@ video {
   }
   .middle-text-box h3 {
     font-size: 20px;
-    margin-bottom:10px;
+    margin-bottom:0px;
   }
   .white-box h2 {
     font-size: 15px;
@@ -538,6 +538,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
