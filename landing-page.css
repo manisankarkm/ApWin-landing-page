@@ -412,7 +412,7 @@ video {
   }
   .home-inner .btm-content-bx {
     max-width: 55%;
-    margin: 10px auto;
+    margin: 0px auto;
     margin-bottom:0px;
   }
   /* MODIFIED: Adjusted box size for desktop/tablet */
@@ -451,7 +451,7 @@ video {
   }
   .home-inner .btm-content-bx {
     max-width: 75%;
-    margin: 10px auto;
+    margin: 0px auto;
     margin-bottom:0px;
   }
   /* MODIFIED: Adjusted box size for mobile */
@@ -538,6 +538,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
