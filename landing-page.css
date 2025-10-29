@@ -475,7 +475,7 @@ video {
   }
   .logo-box img {
     margin: 0 auto 10px;
-    max-width: 40%;
+    max-width: 60%;
   }
   .middle-text-box h3 {
     font-size: 28px;
@@ -490,7 +490,7 @@ video {
     margin-bottom: 5px;
   }
   .boxes {
-    width: 80%;
+    width: 90%;
   }
   .bottom-sports-image {
     max-width: 95%;
@@ -532,3 +532,4 @@ video {
     margin-top: 5px;
   }
 }
+
