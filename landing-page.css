@@ -407,7 +407,7 @@ video {
     line-height: 90px;
   }
   .middle-text-box h3 {
-    font-size: 45px;
+    font-size: 50px;
     margin-bottom:0px;
   }
   .home-inner .btm-content-bx {
@@ -481,7 +481,7 @@ video {
     max-width: 70%;
   }
   .middle-text-box h3 {
-    font-size: 35px;
+    font-size: 45px;
     margin-bottom:0px;
   }
   .center-part {
@@ -521,7 +521,7 @@ video {
     max-width: 70%;
   }
   .middle-text-box h3 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom:0px;
   }
   .white-box h2 {
@@ -538,6 +538,7 @@ video {
     margin-top: 5px;
   }
 }
+
 
 
 
